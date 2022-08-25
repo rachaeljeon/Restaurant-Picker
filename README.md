@@ -1,7 +1,13 @@
-# MyAngularApp
+# Welcome to MyAngularApp!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
+### NOTES
+
+Localhost: http://localhost:4200/
+Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-materialmodule-fce9ba6000e1
+Generate a new component: `ng generate component insert-component-name`
+  ---> will automatically create a folder and import into app.module.ts
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
