@@ -8,12 +8,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
+import { TopBarComponent } from './top-bar/top-bar.component';
 // import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivitiesListComponent,
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,4 +35,5 @@ import {MatSelectModule} from '@angular/material/select';
     AppComponent
   ]
 })
+
 export class AppModule { }

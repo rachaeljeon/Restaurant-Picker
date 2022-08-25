@@ -1,6 +1,9 @@
-<a [routerLink]="['/']">
-    <h1>My Store</h1>
-  </a>
-  
-  <a class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
-  
+<div *ngFor="let activity of activities">
+  <h3>
+    {{ activity.name }}
+  </h3>
+
+  <p *ngIf="activity.description">
+    Description: {{ activity.description }}
+  </p>
+</div>
