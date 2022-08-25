@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### NOTES
 
 Localhost: http://localhost:4200/
+(Run: `ng serve --open`)
 
 Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-materialmodule-fce9ba6000e1
 
