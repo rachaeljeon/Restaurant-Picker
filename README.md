@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### NOTES
 
 Localhost: http://localhost:4200/
+
 Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-materialmodule-fce9ba6000e1
+
 Generate a new component: `ng generate component insert-component-name`
   ---> will automatically create a folder and import into app.module.ts
 ## Development server
