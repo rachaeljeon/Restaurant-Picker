@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { activities } from '../activity';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {API_URL} from '../env';
 
 @Component({
   selector: 'app-activities-list',
@@ -15,9 +17,11 @@ export class ActivitiesListComponent implements OnInit {
     window.alert("We like this activity too!");
   }
   
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    return this.http
+    .get(`${API_URL}/`)
   }
 
 }
