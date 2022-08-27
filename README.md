@@ -11,10 +11,13 @@ Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-m
 
 Generate a new component: `ng generate component insert-component-name`
   ---> will automatically create a folder and import into app.module.ts
-  
-Activate virtual environment: `source myproject/bin/activate`
 
-Backend: `flask run`
+
+
+1. Activate virtual environment: `source env/bin/activate`
+2. >>> `export FLASK_APP=hello.py`
+3. Backend: `flask run`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
