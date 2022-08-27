@@ -9,19 +9,22 @@ import {API_URL} from '../env';
   styleUrls: ['./activities-list.component.css']
 })
 
-export class ActivitiesListComponent implements OnInit {
+export class ActivitiesListComponent {
 
-  activities = activities;
-  
-  like() {
-    window.alert("We like this activity too!");
-  }
-  
+
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
-    return this.http
-    .get(`${API_URL}/`)
-  }
+  activities = activities;
+  businesses: any;
 
+  showBusinesses() {
+    // window.alert("We like this activity too!");
+    console.log("You clicked on me!")
+    return this.http.get(`${API_URL}/`)
+    .subscribe(data => {
+      console.log("YAYY, data------>>", data)
+      this.businesses = data
+    })
+  }
+  
 }

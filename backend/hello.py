@@ -1,12 +1,17 @@
 import requests
 from YelpAPI import get_my_key
 from flask import Flask
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+# cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+# app.config['CORS_HEADERS'] = 'Content-Type'
 
 API_KEY = get_my_key()
 HEADERS = {
-    'Authorization': 'bearer %s' % API_KEY
+    'Authorization': 'bearer %s' % API_KEY,
+    'Access-Control-Allow-Origin': '*',
+    'Accept': 'application/json, texxt/plain, */*'
 }
 
 
@@ -22,16 +27,6 @@ PARAMS = {
     'location': 'Buffalo, NY'
 }
 
-
-
-# from yelp.client import Client
-# MY_API_KEY = "67sg5N_QqZzu3UdqCX8U5rqGbvBEBXVYu-jokMRznOO97vrlfJxSqZJUKJ_Ae_GPTWKoMM0V0W3Z00bH6IybQX4AyaBGVeHS9xMf3RF0n-udN6d7U0XwjXahHjv0YHYx" #  Replace this with your real API key
-
-# client = Client(MY_API_KEY)
-
-# business_response = client.business.get_by_id('yelp-san-francisco')
-# print(business_response)
-
 #-----------------------------------------------------------------------------
 
 @app.route('/')
@@ -42,12 +37,14 @@ def hello_world():
     # Convert: JSON to dictionary
     business_data = response.json()
 
-    print(business_data.keys())
+    return business_data['businesses']
+    # print(business_data.keys())
 
-    for biz in business_data['businesses']:
-        print(biz['name'])
+    # arr = []
+    # for biz in business_data['businesses']:    
+    #     arr.append(biz)
 
-    return biz['name']
+    # print(business_data['businesses'])
 
 if __name__ == '__main__':
     app.run()

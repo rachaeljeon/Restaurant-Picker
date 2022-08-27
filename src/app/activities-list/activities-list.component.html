@@ -1,4 +1,5 @@
 <div *ngFor="let activity of activities">
+  
   <h3>
     {{ activity.name }}
   </h3>
@@ -6,4 +7,15 @@
   <p *ngIf="activity.description">
     Description: {{ activity.description }}
   </p>
+
+  <button type="button" (click)="showBusinesses()">
+    Show Businesses
+  </button>
+
+  <ul class="list-businesses">
+    <li *ngFor="let business of businesses">
+      {{ business.alias }}
+    </li>
+  </ul>
+
 </div>
