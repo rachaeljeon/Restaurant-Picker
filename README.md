@@ -11,13 +11,15 @@ Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-m
 
 Generate a new component: `ng generate component insert-component-name`
   ---> will automatically create a folder and import into app.module.ts
-
-
-
+<br>
+<br>
 1. Activate virtual environment: `source env/bin/activate`
 2. '>>> `export FLASK_APP=hello.py`'
 (source: https://stackoverflow.com/questions/66627441/error-could-not-locate-a-flask-application)
 3. Backend: `flask run`
+
+### NOTE
+Must install 'Allow CORS' extension for chrome browser
 
 ## Development server
 
