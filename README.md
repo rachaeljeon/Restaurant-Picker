@@ -15,7 +15,7 @@ Generate a new component: `ng generate component insert-component-name`
 
 
 1. Activate virtual environment: `source env/bin/activate`
-2. >>> `export FLASK_APP=hello.py`
+2. '>>> `export FLASK_APP=hello.py`'
 3. Backend: `flask run`
 
 ## Development server
