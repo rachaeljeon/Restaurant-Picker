@@ -11,6 +11,8 @@ Helpful imports: https://winsmarts.com/angular-material-has-no-exported-member-m
 
 Generate a new component: `ng generate component insert-component-name`
   ---> will automatically create a folder and import into app.module.ts
+  
+Activate virtual environment: `source myproject/bin/activate`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
