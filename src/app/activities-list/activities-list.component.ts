@@ -11,20 +11,18 @@ import {API_URL} from '../env';
 
 export class ActivitiesListComponent {
 
-
   constructor(private http: HttpClient) { }
-
+ 
+  more:boolean[]=[]
   activities = activities;
   businesses: any;
 
   showBusinesses() {
     // window.alert("We like this activity too!");
-    console.log("You clicked on me!")
     return this.http.get(`${API_URL}/`)
     .subscribe(data => {
       console.log("YAYY, data------>>", data)
       this.businesses = data
     })
   }
-  
 }
