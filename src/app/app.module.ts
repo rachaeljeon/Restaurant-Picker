@@ -11,6 +11,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { TopBarComponent } from './top-bar/top-bar.component';
 // import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatDatepickerModule,
     MatSelectModule,
+    MatButtonToggleModule,
   ],
   exports: [
     MatIconModule
