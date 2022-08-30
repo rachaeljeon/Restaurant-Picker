@@ -54,6 +54,7 @@ BUZ_PARAMS = {
 CAT_PARAMS = {
     'locale': 'en_US'
 }
+
 #-----------------------------------------------------------------------------
 
 # Retrieve data from server
