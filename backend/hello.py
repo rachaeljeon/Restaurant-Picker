@@ -11,17 +11,11 @@ app = Flask(__name__)
 # cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 # app.config['CORS_HEADERS'] = 'Content-Type'
 
-API_BUSINESS_KEY = get_my_business_key()
-API_CATEGORY_KEY = get_my_category_key()
-BUSINESS_HEADERS = {
-    'Authorization': 'bearer %s' % API_BUSINESS_KEY,
+API_KEY = get_my_business_key()
+HEADERS = {
+    'Authorization': 'bearer %s' % API_KEY,
     'Access-Control-Allow-Origin': '*',
-    'Accept': 'application/json, texxt/plain, */*'
-}
-CATEGORY_HEADERS = {
-    'Authorization': 'bearer %s' % API_CATEGORY_KEY,
-    'Access-Control-Allow-Origin': '*',
-    'Accept': 'application/json, texxt/plain, */*'
+    'Accept': 'application/json, text/plain, */*'
 }
 
 #-----------------------------------------------------------------------------
@@ -46,12 +40,12 @@ CAT_PARAMS = {
 @app.route('/')
 def hello_world():
     #Make a request to Yelp API
-    response = requests.get(url=CAT_ENDPOINT, params=CAT_PARAMS, headers=CATEGORY_HEADERS)
+    response = requests.get(url=CAT_ENDPOINT, params=CAT_PARAMS, headers=HEADERS)
     
     # Convert: JSON to dictionary
     business_data = response.json()
     arr_buz = business_data["categories"] # [{'alias': 'x', 'title': 'fast food'}, {'alias': 'x', 'title': 'fast food'}, ..., {'alias': 'x', 'title': 'fast food'}]
-    #return arr_buz
+    
     name_of_restaurants = []
     for cat in arr_buz: # {'alias': 'x', 'parent_aliases': 'restaurants'}
         key = 'parent_aliases'
