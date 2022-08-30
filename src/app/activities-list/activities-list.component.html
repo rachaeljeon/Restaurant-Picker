@@ -9,8 +9,8 @@
     Description: {{ activity.description }}
   </p>
 
-  <button type="button" *ngIf="this.showBusinesses" (click)="showBusinesses()">
-    Show Businesses
+  <button type="button" *ngIf="this.showCusines" (click)="showCusines()">
+    Show Cusine
   </button>
 <!--   
   <div class="test" *ngFor="let business of businesses; let i=index">
@@ -20,8 +20,8 @@
   </div> -->
 
   <ul class="list-businesses">
-    <li *ngFor="let business of businesses">
-      {{ business }}
+    <li *ngFor="let cusine of cusines">
+      {{ cusine }}
     </li>
   </ul>
 

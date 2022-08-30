@@ -15,14 +15,14 @@ export class ActivitiesListComponent {
  
   more:boolean[]=[]
   activities = activities;
-  businesses: any;
+  cusines: any;
 
-  showBusinesses() {
+  showCusines() {
     // window.alert("We like this activity too!");
     return this.http.get(`${API_URL}/`)
     .subscribe(data => {
       console.log("YAYY, data------>>", data)
-      this.businesses = data
+      this.cusines = data
     })
   }
 }
